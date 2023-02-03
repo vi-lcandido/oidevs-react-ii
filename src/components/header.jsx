@@ -1,3 +1,3 @@
 export const Header = (props) => {
-    return <div>{props.children}</div>
+    return props.children
 }
