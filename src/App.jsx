@@ -1,7 +1,7 @@
-import { Header } from "./components/header";
-import { NavItem } from "./components/nav-item";
 import { Navbar } from "./components/navbar";
 import { Title } from "./components/title";
+import { NavItem } from "./components/nav-item";
+import { Header} from "./components/header";
 import { Avatar } from "./components/avatar";
 import { Button } from "./components/button";
 import { Text } from "./components/text";
@@ -12,9 +12,11 @@ function App() {
     "Pesquisa",
     "Explorar",
     "Reels",
+    "Mensagens",
     "Notificações",
     "Criar",
     "Perfil",
+    "Mais",
   ];
   return (
     <>
