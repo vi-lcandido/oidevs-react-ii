@@ -28,6 +28,7 @@ function App() {
       </Navbar>
       <Header>
         <Avatar />
+        <h1>T</h1>
         <Text bold={true}>@adatechbr</Text>
         <Button>Seguindo</Button>
         <Button>Enviar mensagem</Button>
