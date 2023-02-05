@@ -1,14 +1,6 @@
 import { NavItem } from "../nav-item";
 import { Title } from "../title";
-
-import styled from "styled-components";
-
-export const NavBarWrapper = styled.div`
-display: flex;
-flex-direction: column;
-background-color: black;
-height: 100vh;
-`
+import * as S from "./style";
 
 const items = [
   "Página inicial",
@@ -23,12 +15,18 @@ const items = [
 
 export const Navbar = (props) => {
   return (
-    <NavBarWrapper>
-      <Title />
-      {items.map((item) => (
-        <NavItem key={item} text={item} />
-      ))}
+    <S.NavBarWrapper>
+      <S.Box>
+        <S.Box>
+          <Title />
+        </S.Box>
+        <S.Box>
+          {items.map((item) => (
+            <NavItem key={item} text={item} />
+          ))}
+        </S.Box>
+      </S.Box>
       <NavItem text="Mais" />
-    </NavBarWrapper>
+    </S.NavBarWrapper>
   );
 };

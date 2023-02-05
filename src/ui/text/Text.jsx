@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import * as S from "./style"
 
-export const Text = styled.div`
-  font-weight: ${props => props.bold ? 'bold' : ''};
-  color: #fff
-`
+
+export const Text = (props) => {
+  return <S.TextWrapper {...props}>{props.children}</S.TextWrapper>;
+};

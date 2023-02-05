@@ -8,4 +8,5 @@ export const Grid = styled.div`
 `;
 
 export const GridItem = styled.div`
-position: relative`
+  position: relative;
+`;
