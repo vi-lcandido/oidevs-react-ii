@@ -15,7 +15,7 @@ const items = [
 
 export const Navbar = (props) => {
   return (
-    <S.NavBarWrapper>
+    <S.NavBarContainer>
       <S.Box>
         <S.Box>
           <Title />
@@ -27,6 +27,6 @@ export const Navbar = (props) => {
         </S.Box>
       </S.Box>
       <NavItem text="Mais" />
-    </S.NavBarWrapper>
+    </S.NavBarContainer>
   );
 };

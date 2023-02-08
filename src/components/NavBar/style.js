@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const NavBarWrapper = styled.div`
+export const NavBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: black;

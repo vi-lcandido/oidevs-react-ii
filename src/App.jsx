@@ -1,7 +1,8 @@
 // import "./App.css";
-import { Navbar } from "./components/navbar";
-import { Header } from "./components/Header/header";
+import { Navbar } from "./components/navBar";
+import { Header } from "./components/header/header";
 import * as S from "./ui/grid";
+import { Highlight } from "./components/highlight";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </S.GridItem>
       <S.GridItem>
         <Header />
+        
       </S.GridItem>
     </S.Grid>
   );

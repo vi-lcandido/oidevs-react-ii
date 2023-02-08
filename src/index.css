@@ -2,13 +2,15 @@ body{
   margin: 0;
   background-color: #131313;
   height: 100vh;
-  color: white;
+  font-family:'Segoe UI', Helvetica, Arial, sans-serif
 }
 
 #root{
   height: 100vh;
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
