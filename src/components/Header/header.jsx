@@ -1,32 +1,39 @@
 import { Avatar } from "../avatar";
 import { Text, TextLink } from "../../ui/text";
 import { Button } from "../../ui/button/button";
+import { dataHeader } from "../../data-header";
 import * as S from "./style";
 
 export const Header = (props) => {
-
   return (
     <S.HeaderContainer>
       <S.AvatarContainer>
-        <Avatar imagePath="https://via.placeholder.com/150"/>
+        <Avatar size={150} imagePath={dataHeader.profilePic} />
       </S.AvatarContainer>
       <S.HeaderContent>
         <S.DataInfo>
-          <Text bold={true}>@adatechbr</Text>
+          <Text bold>{dataHeader.userName}</Text>
           <Button>Seguindo</Button>
           <Button>Enviar mensagem</Button>
         </S.DataInfo>
         <S.DataInfo>
-          <Text>211 publicações</Text>
-          <Text>44,2 mil seguidores</Text>
-          <Text>2 seguindo</Text>
+          <Text>{dataHeader.posts} publicações</Text>
+          <Text>{dataHeader.followers} mil seguidores</Text>
+          <Text>{dataHeader.following} seguindo</Text>
         </S.DataInfo>
         <S.BioInfo>
-          <Text bold>Ada Tech</Text>
-          <Text color="#a8a8a8">Educação</Text>
-          <TextLink bold href="https://beacons.ai/adatechbr">Ada. A Nova Educação</TextLink>
+          <Text bold>{dataHeader.igName}</Text>
+          <Text color="#a8a8a8">{dataHeader.category}</Text>
+          <TextLink bold href="https://beacons.ai/adatechbr" target={"_blank"}>
+            {dataHeader.link}
+          </TextLink>
           <S.FollowerInfo>
-            <Text size = "small">Seguido por fulaninho de tal, beltrano, cicrano</Text>
+            <Text size="small" color="#a8a8a8">
+              Seguida por {" "}
+              <Text bold size="small" color="#fff">
+                {dataHeader.followedBy.join(", ")}
+              </Text>
+            </Text>
           </S.FollowerInfo>
         </S.BioInfo>
       </S.HeaderContent>

@@ -12,7 +12,7 @@ function App() {
       </S.GridItem>
       <S.GridItem>
         <Header />
-        
+        <Highlight/>
       </S.GridItem>
     </S.Grid>
   );

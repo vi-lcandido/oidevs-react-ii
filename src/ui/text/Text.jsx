@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 //esse textCss é o padrão que está sendo definido para os meus componentes texto tornando-o reapoveitável
 export const textCss = css`
   font-weight: ${(props) => (props.bold ? "600" : "")};
+  display: inline-block;
   color: ${(props) => props.color || "#fafafa"};
   ${(props) => (props.size === "small" ? "font-size: 12px" : "")}
 `;
