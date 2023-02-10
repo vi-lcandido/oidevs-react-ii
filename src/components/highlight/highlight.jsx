@@ -1,8 +1,6 @@
 import * as S from "./style";
 import { Avatar } from "../avatar";
-import {highlightList} from "../../data-header"
-
-
+import { highlightList } from "../../igData";
 
 export const Highlight = () => {
   return (

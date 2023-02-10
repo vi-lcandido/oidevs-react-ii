@@ -5,12 +5,15 @@ export const AvatarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+  /* margin-right: 30px; */
+  `;
 
 export const HeaderContainer = styled.section`
   display: flex;
   padding-top: 50px;
   justify-content: center;
+  border: 1px solid red;
+
   `;
 
 export const HeaderContent = styled.div`

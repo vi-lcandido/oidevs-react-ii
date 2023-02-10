@@ -1,10 +1,22 @@
 // import "./App.css";
 import { Navbar } from "./components/navBar";
 import { Header } from "./components/header/header";
-import * as S from "./ui/grid";
 import { Highlight } from "./components/highlight";
+import { getImageFromApi } from "./services/index";
+import { useEffect, useState } from "react";
+import * as S from "./ui/grid";
 
 function App() {
+  const [photo, setPhotos] = useState([]);
+
+  useEffect(() => {
+    const makeRequest = async () => {
+      const response = await getImageFromApi("photos");
+      console.log(response);
+    };
+    makeRequest()
+  });
+
   return (
     <S.Grid templateColumns={"20% 80%"}>
       <S.GridItem>
@@ -12,7 +24,7 @@ function App() {
       </S.GridItem>
       <S.GridItem>
         <Header />
-        <Highlight/>
+        <Highlight />
       </S.GridItem>
     </S.Grid>
   );

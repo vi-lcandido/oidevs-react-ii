@@ -1,7 +1,7 @@
 import { Avatar } from "../avatar";
 import { Text, TextLink } from "../../ui/text";
 import { Button } from "../../ui/button/button";
-import { dataHeader } from "../../data-header";
+import { dataHeader } from "../../igData";
 import * as S from "./style";
 
 export const Header = (props) => {
@@ -29,7 +29,7 @@ export const Header = (props) => {
           </TextLink>
           <S.FollowerInfo>
             <Text size="small" color="#a8a8a8">
-              Seguida por {" "}
+              Seguida por{" "}
               <Text bold size="small" color="#fff">
                 {dataHeader.followedBy.join(", ")}
               </Text>
