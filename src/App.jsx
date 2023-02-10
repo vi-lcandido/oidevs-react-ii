@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const makeRequest = async () => {
       const response = await getImageFromApi("photos");
-      console.log(response);
+      setPhotos(response);
     };
     makeRequest()
   });
