@@ -5,17 +5,23 @@ export const Container = styled.ul`
   display: flex;
   gap: 30px;
   text-align: center;
-  border: 1px solid purple;
-  padding-left: 25px;
+  justify-content: start;
   margin-bottom: 40px;
-`;
+  border: 1px solid red
+  `;
 
 export const HighlightItem = styled.li`
-margin-top: 30px;
+/* margin-top: 10px; */
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
+width: 95px;
 `;
 
-export const HighlightTitle = styled(Text)``;
+export const HighlightTitle = styled(Text)`
+margin-top: 10px;
+width: 100%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+`;

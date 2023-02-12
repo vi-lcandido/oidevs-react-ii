@@ -1,24 +1,27 @@
 import styled from "styled-components";
 
 export const AvatarContainer = styled.div`
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-right: 30px; */
+  margin-right: 30px;
+  border: 1px solid green;
   `;
 
 export const HeaderContainer = styled.section`
   display: flex;
-  padding-top: 50px;
-  justify-content: center;
-  border: 1px solid red;
+  flex-direction: row;
+  margin-bottom: 40px;
+  /* padding: 50px 20px 0; */
+  border: 1px solid purple;
 
   `;
 
 export const HeaderContent = styled.div`
   width: 100%;
-  max-width: 500px;
+  /* max-width: 500px; */
+  border: 1px solid white;
+
 `;
 
 export const DataInfo = styled.div`

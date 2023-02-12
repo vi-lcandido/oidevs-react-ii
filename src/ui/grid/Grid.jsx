@@ -5,6 +5,7 @@ export const Grid = styled.div`
   grid-template-columns: ${(props) => props.templateColumns};
   height: 100vh;
   position: relative;
+  justify-content: start;
 `;
 
 export const GridItem = styled.div`

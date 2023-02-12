@@ -18,9 +18,9 @@ export const Navbar = (props) => {
     <S.NavBarContainer>
       <S.Box>
         <S.Box>
-          <Title />
+          <Title/>
         </S.Box>
-        <S.Box>
+        <S.Box margin={25}>
           {items.map((item) => (
             <NavItem key={item} text={item} />
           ))}
