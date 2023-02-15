@@ -1,4 +1,4 @@
-# Módulo de React II do OiDevs
+# Módulo de React II do OiDevs - Projeto clone Instagram
 
 ### As aulas estão separadas por branch para evolução durante o curso.
 
