@@ -14,6 +14,10 @@ const items = [
 ];
 
 export const Navbar = (props) => {
+const onClickLoginHandler = () => {
+  props.onClickToLoginBtn("login")
+}
+
   return (
     <S.NavBarContainer>
       <S.Box>
@@ -26,7 +30,8 @@ export const Navbar = (props) => {
           ))}
         </S.Box>
       </S.Box>
-      <NavItem text="Mais" />
+      <NavItem onClick={onClickLoginHandler} text={"Sair"} />
+      <NavItem text={"Mais"} />
     </S.NavBarContainer>
   );
 };

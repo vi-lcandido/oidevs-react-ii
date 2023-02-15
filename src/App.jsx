@@ -1,39 +1,16 @@
-// import "./App.css";
-import { Navbar } from "./components/navBar";
-import { Header } from "./components/header/header";
-import { Highlight } from "./components/highlight";
-import { Feed } from "./components/feed";
-import styled from "styled-components";
-import * as S from "./ui/grid";
+import { useState } from "react";
+import { Home } from "./pages/home";
+import {Login} from "./pages/login"
 
-const ScrollPage = styled.div`
-  overflow-y: scroll;
-  height: 100%;
-  /* border: 5px solid purple; */
-`;
-const ContainerView = styled.div`
-  max-width: 980px;
-  padding: 25px 20px;
-  margin: auto;
-  border: 1px solid orange;
-`;
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("login");
+  console.log(currentPage);
   return (
-    <S.Grid templateColumns={"20% 80%"}>
-      <S.GridItem>
-        <Navbar />
-      </S.GridItem>
-      <ScrollPage>
-        <ContainerView>
-          <S.GridItem>
-            <Header />
-            <Highlight />
-            <Feed />
-          </S.GridItem>
-        </ContainerView>
-      </ScrollPage>
-    </S.Grid>
+    <>
+      {currentPage === "login" && <Login onClickToHomeBtn={setCurrentPage} />}
+      {currentPage === "home" && <Home onClickToLoginBtn={setCurrentPage}/>}
+    </>
   );
 }
 

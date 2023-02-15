@@ -8,7 +8,7 @@ const NavItemStyle = styled.div`
 
 export const NavItem = (props) => {
   return (
-    <NavItemStyle>
+    <NavItemStyle {...props}>
       <Text>{props.text}</Text>
     </NavItemStyle>
   );
