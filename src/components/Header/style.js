@@ -5,7 +5,7 @@ export const AvatarContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 30px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   `;
 
 export const HeaderContainer = styled.section`
@@ -13,14 +13,14 @@ export const HeaderContainer = styled.section`
   flex-direction: row;
   margin-bottom: 40px;
   /* padding: 50px 20px 0; */
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
 
   `;
 
 export const HeaderContent = styled.div`
   width: 100%;
   /* max-width: 500px; */
-  border: 1px solid white;
+  /* border: 1px solid white; */
 
 `;
 

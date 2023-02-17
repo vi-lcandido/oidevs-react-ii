@@ -14,7 +14,7 @@ const ContainerView = styled.div`
   max-width: 980px;
   padding: 25px 20px;
   margin: auto;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 `;
 export const Home = (props) => {
     return (

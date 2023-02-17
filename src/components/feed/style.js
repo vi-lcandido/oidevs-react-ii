@@ -8,7 +8,7 @@ export const Container = styled.div`
   gap: 28px;
   padding: 40px 20px 0;
   width: 100%;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 `;
 
 export const FeedPhoto = styled.div`

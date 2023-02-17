@@ -7,7 +7,7 @@ export const Container = styled.ul`
   text-align: center;
   justify-content: start;
   margin-bottom: 40px;
-  border: 1px solid red
+  /* border: 1px solid red */
   `;
 
 export const HighlightItem = styled.li`
