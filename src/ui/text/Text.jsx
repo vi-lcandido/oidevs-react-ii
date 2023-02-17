@@ -18,6 +18,7 @@ export const TextLink = styled.a`
   ${textCss};
   color: rgb(224, 241, 255);
   text-decoration: none;
+  cursor:pointer;
   &:hover{
     text-decoration: underline;
   }
