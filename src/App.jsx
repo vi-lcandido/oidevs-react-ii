@@ -5,7 +5,7 @@ import { SignUp } from "./pages/sign-up/signup";
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("signup");
+  const [currentPage, setCurrentPage] = useState("login");
   // console.log(currentPage);
   return (
     <>
