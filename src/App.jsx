@@ -5,13 +5,13 @@ import { SignUp } from "./pages/sign-up/signup";
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("login");
+  const [currentPage, setCurrentPage] = useState("signup");
   // console.log(currentPage);
   return (
     <>
       {currentPage === "login" && <Login onClickToHomeBtn={setCurrentPage} onClickToSignUpLink={setCurrentPage} />}
       {currentPage === "home" && <Home onClickToLoginBtn={setCurrentPage}/>}
-      {currentPage === "signup" && <SignUp onClickToSignUpLink={setCurrentPage}/>}
+      {currentPage === "signup" && <SignUp backToHomeBtn={setCurrentPage}/>}
     </>
   );
 }
