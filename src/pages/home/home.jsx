@@ -16,11 +16,11 @@ const ContainerView = styled.div`
   margin: auto;
   /* border: 1px solid orange; */
 `;
-export const Home = (props) => {
-    return (
-        <S.Grid templateColumns={"20% 80%"}>
+export const Home = () => {
+  return (
+    <S.Grid templateColumns={"20% 80%"}>
       <S.GridItem>
-        <Navbar onClickToLoginBtn={props.onClickToLoginBtn}/>
+        <Navbar />
       </S.GridItem>
       <ScrollPage>
         <ContainerView>
@@ -32,5 +32,5 @@ export const Home = (props) => {
         </ContainerView>
       </ScrollPage>
     </S.Grid>
-    )
-}
+  );
+};

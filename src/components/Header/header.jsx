@@ -2,9 +2,13 @@ import { Avatar } from "../avatar";
 import { Text, TextLink } from "../../ui/text";
 import { Button } from "../../ui/button/button";
 import { dataHeader } from "../../igData";
+import { useContext } from "react";
+import { instaContext } from "../../App";
 import * as S from "./style";
 
-export const Header = (props) => {
+export const Header = () => {
+  const state = useContext(instaContext);
+  console.log(state);
   return (
     <S.HeaderContainer>
       <S.AvatarContainer>
@@ -12,7 +16,7 @@ export const Header = (props) => {
       </S.AvatarContainer>
       <S.HeaderContent>
         <S.DataInfo>
-          <Text bold>{dataHeader.userName}</Text>
+          <Text bold>{state.myState.user.username}</Text>
           <Button>Seguindo</Button>
           <Button>Enviar mensagem</Button>
         </S.DataInfo>

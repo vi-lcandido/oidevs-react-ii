@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { instaContext } from "../../App";
 import { NavItem } from "../nav-item";
 import { Title } from "../title";
 import * as S from "./style";
@@ -13,16 +15,18 @@ const items = [
   "Perfil",
 ];
 
-export const Navbar = (props) => {
-const onClickLoginHandler = () => {
-  props.onClickToLoginBtn("login")
-}
+export const Navbar = () => {
+  const { myState, myDispatch } = useContext(instaContext);
+
+  const onClickLoginHandler = () => {
+    myDispatch({ type: "change_current_page", payload: "login" });
+  };
 
   return (
     <S.NavBarContainer>
       <S.Box>
         <S.Box>
-          <Title/>
+          <Title />
         </S.Box>
         <S.Box margin={25}>
           {items.map((item) => (
