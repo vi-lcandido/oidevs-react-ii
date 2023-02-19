@@ -9,11 +9,20 @@ import { Input } from "../../components/form";
 export const Login = () => {
   const { myState, myDispatch } = useContext(instaContext);
 
-  const [user, setUser] = useState("")
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
 
   const onClickHomeHandler = () => {
-    myDispatch({ type: "change_current_page", payload: "home" });
-    myDispatch({type: "add_user", payload: {username: user}});
+    if (user && password) {
+      if (user.length >= 6 && password.length >= 6) {
+        myDispatch({ type: "change_current_page", payload: "home" });
+        myDispatch({ type: "add_user", payload: { username: user } });
+      } else {
+        alert("Digite Usuário e Senha com no mínimo 6 caracteres");
+      }
+    } else {
+      alert("Digite Usuário e Senha");
+    }
   };
 
   const onClickSignUpHandler = () => {
@@ -21,14 +30,28 @@ export const Login = () => {
   };
 
   const handleChangeUser = (event) => {
-    setUser(event.currentTarget.value)
-  }
+    setUser(event.currentTarget.value);
+  };
+  const handleChangePassword = (event) => {
+    setPassword(event.currentTarget.value);
+  };
   return (
     <S.Container>
       <Title />
       <S.Box width={80}>
-        <Input text={"Usuário"} type="text" placeholder="Digite seu usuário" onChange={handleChangeUser}/>
-        <Input text={"Senha"} type="password" placeholder="Digite sua senha" />
+        <Input
+          text={"Usuário"}
+          type="text"
+          placeholder="Digite seu usuário"
+          onChange={handleChangeUser}
+        />
+        <Input
+          text={"Senha"}
+          type="password"
+          placeholder="Digite sua senha"
+          onChange={handleChangePassword}
+          value={password}
+        />
         <S.BtnDivForm>
           <Button bgcolor="#2189ce" size={100} onClick={onClickHomeHandler}>
             Login
