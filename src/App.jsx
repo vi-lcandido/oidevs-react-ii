@@ -11,13 +11,22 @@ function reducer(state, action) {
         ...state,
         currentPage: action.payload,
       };
+    case "add_user":
+      return {
+        ...state,
+        user: {
+          username: action.payload.username,
+        },
+      };
+    default:
+      return state;
   }
 }
 
 const initialState = {
   currentPage: "login",
   user: {
-    username: "@vrau",
+    username: "",
   },
 };
 

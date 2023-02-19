@@ -9,10 +9,11 @@ import { Input } from "../../components/form";
 export const Login = () => {
   const { myState, myDispatch } = useContext(instaContext);
 
- 
+  const [user, setUser] = useState("")
 
   const onClickHomeHandler = () => {
     myDispatch({ type: "change_current_page", payload: "home" });
+    myDispatch({type: "add_user", payload: {username: user}});
   };
 
   const onClickSignUpHandler = () => {
