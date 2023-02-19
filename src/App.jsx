@@ -15,7 +15,16 @@ function reducer(state, action) {
       return {
         ...state,
         user: {
+          ...state.user,
           username: action.payload.username,
+        },
+      };
+    case "add_feed_photos":
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          photos: action.payload,
         },
       };
     default:
@@ -26,7 +35,8 @@ function reducer(state, action) {
 const initialState = {
   currentPage: "login",
   user: {
-    username: "",
+    username: "@meu",
+    photos: [],
   },
 };
 
@@ -37,7 +47,7 @@ function App() {
 
   //troca de páginas passando como parâmetro a page, trocada automaticamente pois "home, "login e "sing-up foram passadas como parâmetros em suas respectivas funções"
   //dispatch que chama um reducer o qual atualiza o estado que atualiza a visualização
-  const onClickNavigate = (page) => {};
+  const onClickNavigate = () => {};
 
   return (
     <instaContext.Provider
