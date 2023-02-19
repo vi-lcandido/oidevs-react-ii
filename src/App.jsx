@@ -4,7 +4,6 @@ import { Login } from "./pages/login";
 import { SignUp } from "./pages/sign-up/signup";
 
 function reducer(state, action) {
-  console.log(action, "action sendo disparada");
   switch (action.type) {
     case "change_current_page":
       return {

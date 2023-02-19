@@ -8,7 +8,7 @@ import * as S from "./style";
 
 export const Header = () => {
   const state = useContext(instaContext);
-  console.log(state);
+
   return (
     <S.HeaderContainer>
       <S.AvatarContainer>

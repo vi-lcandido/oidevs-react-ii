@@ -8,9 +8,7 @@ import { instaContext } from "../../App";
 
 export const Feed = () => {
   const {myState, myDispatch} = useContext(instaContext);
-  console.log(myState);
-
-  const [photos, setPhotos] = useState([]);
+  // const [photos, setPhotos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
 
