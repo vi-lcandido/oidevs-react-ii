@@ -20,6 +20,8 @@ const initialState = {
 function App() {
   const [globalState, dispatch] = useReducer(reducer, initialState);
 
+//troca de páginas passando como parâmetro a page, trocada automaticamente pois "home, "login e "sing-up foram passadas como parâmetros em suas respectivas funções"
+//dispatch que chama um reducer o qual atualiza o estado que atualiza a visualização
   const onClickNavigate = (page) => {
     dispatch({ type: "change_current_page", payload: page });
   };
