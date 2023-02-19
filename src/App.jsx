@@ -1,6 +1,7 @@
 import { createContext, useReducer } from "react";
 import { Home } from "./pages/home";
 import { Login } from "./pages/login";
+import { Photo } from "./pages/photo";
 import { SignUp } from "./pages/sign-up/signup";
 
 function reducer(state, action) {
@@ -26,6 +27,18 @@ function reducer(state, action) {
           photos: action.payload,
         },
       };
+
+    case "add_open_image":
+      const currentImg = state.user.photos.find((img) => {
+        return img.id === action.payload;
+      });
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          fullPageImg: currentImg,
+        },
+      };
     default:
       return state;
   }
@@ -36,6 +49,7 @@ const initialState = {
   user: {
     username: "@meu",
     photos: [],
+    fullPageImg: null,
   },
 };
 
@@ -59,6 +73,7 @@ function App() {
       {globalState.currentPage === "signup" && (
         <SignUp backToHomeBtn={onClickNavigate} />
       )}
+      {globalState.currentPage === "fullpagephoto" && <Photo />}
     </instaContext.Provider>
   );
 }

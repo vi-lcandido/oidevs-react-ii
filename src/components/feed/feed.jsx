@@ -27,13 +27,20 @@ export const Feed = () => {
     };
     makeRequest();
   }, []);
+
+  const handleImgClick = (imgId) => {
+    myDispatch({type: "add_open_image", payload: imgId})
+    myDispatch({type: "change_current_page", payload: "fullpagephoto"})
+
+  }
+
   return (
     <S.SectionBody>
       <S.Container>
         {isLoading && <Loading />}
-        {hasError && <Text>Deu ruim</Text>}
+        {/* {hasError && <Text>Deu ruim</Text>} */}
         {myState.user.photos.map((photo) => (
-          <S.FeedPhoto key={photo.id}>
+          <S.FeedPhoto key={photo.id} onClick={() => handleImgClick(photo?.id)}>
             <S.Image src={photo.urls.small} />
           </S.FeedPhoto>
         ))}
